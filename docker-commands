@@ -1,1 +1,2 @@
-
+# Build + run all projects (run this command in root for build all the projects which contain /docker-compose.yml)
+for d in */docker-compose.yml; do docker compose -f "$d" up -d --build; done
