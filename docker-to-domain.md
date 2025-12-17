@@ -110,7 +110,7 @@ This guide explains how to deploy a web application (a Vite/React frontend and a
 
 4. Symlinked Your above file:
     ```bash
-    sudo ln -s /etc/nginx/sites_available/quanttiphy.com /etc/nginx/sites_enabled/quanttiphy.com
+    sudo ln -s /etc/nginx/sites_available/quanttiphy.com /etc/nginx/sites-enabled/quanttiphy.com
     ```
     
     `This will enable nginx to serve your project/files over domain`
