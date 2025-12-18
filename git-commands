@@ -1,2 +1,2 @@
-1. remove git from the local machine:
+# remove git from the local machine:
 Remove-Item -Recurse -Force .git
