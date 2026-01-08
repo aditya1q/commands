@@ -1,0 +1,14 @@
+# Install pip if it is not already installed
+python -m ensurepip --default-pip
+
+# Upgrade pip to the latest version
+python -m pip install --upgrade pip
+
+# Create a virtual environment named "venv"
+python -m venv venv
+
+# Activate the virtual environment
+venv\Scripts\Activate
+
+# Install all required Python packages from requirements.txt
+python -m pip install -r requirements.txt
