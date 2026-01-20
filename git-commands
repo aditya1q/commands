@@ -1,2 +1,103 @@
 # remove git from the local machine:
 Remove-Item -Recurse -Force .git
+
+🔧 Configuration
+git config --global user.name "Your Name"      # Set username
+git config --global user.email "email@mail"   # Set email
+git config --list                             # View config
+
+📁 Repository
+git init                # Initialize repo
+git clone <url>         # Clone remote repo
+
+📊 Status & Info
+git status              # Show working tree status ⭐
+git status -s           # Short status
+git log                 # Full commit history
+git log --oneline       # Compact history ⭐
+git show <commit>       # Show commit details
+
+➕ Staging Files
+git add <file>          # Stage a file
+git add .               # Stage all files ⭐
+git add -p              # Interactive staging ⭐
+
+💾 Commit
+git commit -m "msg"     # Commit staged files ⭐
+git commit --amend     # Edit last commit ⭐
+
+🔄 Undo / Reset (IMPORTANT)
+git restore <file>                 # Discard file changes
+git restore --staged <file>        # Unstage file
+
+git reset --soft HEAD~1            # Undo commit, keep files ⭐
+git reset HEAD~1                   # Undo commit, unstage files
+git reset --hard HEAD~1            # Delete commit & files ❗
+
+
+🧯 Recovery
+git reflog               # Show all HEAD history ⭐
+git reset --hard <id>    # Recover lost commit
+
+
+🌿 Branching
+git branch               # List branches
+git branch <name>        # Create branch
+git checkout <branch>    # Switch branch
+git checkout -b <name>   # Create & switch
+git branch -d <name>     # Delete branch
+
+🔀 Merge & Rebase
+git merge <branch>       # Merge branch ⭐
+git rebase <branch>      # Rebase commits
+git rebase --abort       # Cancel rebase
+
+🌍 Remote
+git remote -v            # View remotes
+git remote add origin <url>
+
+🚀 Push & Pull
+git push                 # Push commits ⭐
+git push -u origin main  # First push
+git pull                 # Fetch + merge ⭐
+git fetch                # Fetch only
+
+⚠️ Force Push
+git push --force                 # Rewrite history ❗
+git push --force-with-lease      # Safer force push ⭐
+
+🧪 Diff
+git diff                # Unstaged changes
+git diff --staged       # Staged changes
+git diff <branch>       # Compare branches
+
+📦 Stash
+git stash               # Save changes ⭐
+git stash list
+git stash apply
+git stash drop
+
+🧹 Clean
+git clean -n             # Preview delete
+git clean -f             # Delete untracked files
+
+🏷️ Tags
+git tag                  # List tags
+git tag v1.0             # Create tag
+git push origin v1.0     # Push tag
+
+⭐ MOST IMPORTANT COMMANDS (MEMORIZE)
+git status
+git add .
+git commit -m "message"
+git log --oneline
+git reset --soft HEAD~1
+git reflog
+git push
+git pull
+
+✅ Recommended Commit Messages
+feat: add login page
+fix: navbar alignment
+refactor: split components
+chore: project structure
