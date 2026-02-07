@@ -1,0 +1,2 @@
+# for add new ssh keys or monitor existing ssh keys
+code .ssh/authorized_keys
