@@ -1,0 +1,10 @@
+# if disk space is full then delete mongo logs
+# how to delete mongo logs
+
+sudo systemctl stop mongod
+sudo rm /var/log/mongodb/mongod.log
+sudo systemctl start mongod
+
+after that restart redis and docker as well
+sudo systemctl restart docker
+sudo systemctl restart redis
