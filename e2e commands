@@ -1,0 +1,9 @@
+# open ports
+sudo iptables -L
+
+-- how to open ports 
+sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+
+-- for save ports
+sudo netfilter-persistent save
+sudo netfilter-persistent reload
