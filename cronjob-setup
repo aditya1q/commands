@@ -1,0 +1,16 @@
+# Set Cron Job
+---- Open cron:
+crontab -e
+
+# set this line
+0 9 * * * /root/folder_name/boot.sh >> /root/folder_name/cron.log 2>&1
+
+# Confirm Cron Saved
+crontab -l
+
+# Make Sure Cron Service Is Running
+systemctl status cron
+
+# If not active:
+systemctl start cron
+systemctl enable cron
