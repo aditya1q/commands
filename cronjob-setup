@@ -5,6 +5,9 @@ crontab -e
 # set this line
 0 9 * * * /root/folder_name/boot.sh >> /root/folder_name/cron.log 2>&1
 
+# Give Execute Permission (VERY IMPORTANT)
+chmod +x /root/arbitrage_backend/boot.sh
+
 # Confirm Cron Saved
 crontab -l
 
