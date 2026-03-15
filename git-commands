@@ -1,6 +1,10 @@
 # remove git from the local machine:
 Remove-Item -Recurse -Force .git
 
+
+# remove env (if pushed to github by mistake) from entire project
+git filter-branch --force --index-filter "git rm --cached --ignore-unmatch .env" --prune-empty --tag-name-filter cat -- --all
+
 🔧 Configuration
 git config --global user.name "Your Name"      # Set username
 git config --global user.email "email@mail"   # Set email
