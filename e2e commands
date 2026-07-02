@@ -7,3 +7,10 @@ sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 -- for save ports
 sudo netfilter-persistent save
 sudo netfilter-persistent reload
+
+
+
+# how to get into the user from root
+1. cat /etc/passwd
+2. ps -ef | grep PM2
+3. su - gyan
